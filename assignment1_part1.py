@@ -7,23 +7,22 @@ def listDivide(numbers, divide=2):
     for number in numbers:
         if number % 2 == 0:
             evens.append(number)
-    return evens
-
+    print evens
+    print len(evens)
 class ListDivideException(Exception):
     pass
-
-def testListDivide(numbers, divide=2):
+def testListDivide():
     def listDivide(numbers, divide=2):
         evens =[ ]
         for number in numbers:
             if number % 2 == 0:
                 evens.append(number)
         print len(evens)
-        try:
-            listDivide([1,2,3,4,5])
-            listDivide([30, 54, 63,98, 100], divide=10)
-            listDivide([])
-            listDivide([1,2,3,4,5]
-            listDivide([2,4,6,8,10])
-        except (ListDivideException):
-            pass
+try:
+    listDivide([1,2,3,4,5])
+    listDivide([30, 54, 63,98, 100], divide=10)
+    listDivide([])
+    listDivide([1,2,3,4,5])
+    listDivide([2,4,6,8,10])
+except ListDivideException:
+    print "Test passed"
